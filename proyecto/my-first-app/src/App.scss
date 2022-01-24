@@ -21,11 +21,12 @@ body {
   padding: 8px 16px;
   border-radius: 10px;
   box-shadow: 0 5px 30px #c53de2;
+  color: white;
 }
 
 /** BUTTONS*/
 $colorPink: #c756e9;
-$colorPinkHover:#343dc2;
+$colorPinkHover:black;
  $colorBlue: #25b0bc;
 $colorBlueHover:#166b72;
  @mixin button($class, $color, $colorHover) {
@@ -40,7 +41,18 @@ $colorBlueHover:#166b72;
   border: 0px solid;
   border-radius: 9px;
   color: white;
+  &:hover{
+    background: white;
+    color: rgb(233, 225, 225);
+  }
+  &.pink,&.blue{
+    cursor: pointer;
+  }
+  
 }
+
+
+
 .button[disabled]{
   opacity: 0.8;
 }

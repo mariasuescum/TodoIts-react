@@ -22,12 +22,15 @@ const FormTodo = props => {
           <input
             type="text"
             className="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Ingresa tu tarea"
+            onChange={(e) => setDescription(e.target.value) }
+            required={description ? "" : "required"}
+            
           />
           <button
             className="button pink"
             disabled={description ? "" : "disabled"}
+            
           >
             Add
           </button>
